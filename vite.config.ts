@@ -5,6 +5,6 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
   return {
     plugins: [react()],
-    base: env.VITE_BASE_PATH || '/',
+    base: env.VITE_BASE_PATH || '/soap-note-web-app/',
   };
 });
