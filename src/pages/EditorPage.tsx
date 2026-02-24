@@ -1,4 +1,4 @@
-import React, { useMemo, useRef, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import type { DataRow, Objective, SoapNoteRecord } from '../models/note';
 import { getHeaderPhiWarnings } from '../utils/phi';
 

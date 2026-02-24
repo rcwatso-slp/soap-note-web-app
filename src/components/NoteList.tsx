@@ -1,4 +1,3 @@
-import React from 'react';
 import type { DraftSummary } from '../models/note';
 import { formatDate } from '../utils/date';
 import { StatusChip } from './StatusChip';

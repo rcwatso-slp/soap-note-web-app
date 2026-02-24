@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import type { DraftSummary } from '../models/note';
 import { NoteList } from '../components/NoteList';
 

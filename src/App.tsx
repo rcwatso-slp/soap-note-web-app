@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Navigate, Route, Routes, useNavigate } from 'react-router-dom';
 import { CreateNoteModal } from './components/CreateNoteModal';
 import type { CreateNoteInput } from './components/CreateNoteModal';
