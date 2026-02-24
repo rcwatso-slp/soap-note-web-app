@@ -151,6 +151,10 @@ function HomeRoute(): JSX.Element {
           onExportPdf={() => {
             navigate('/print', { state: { note: activeNote } });
           }}
+          onExportDocx={async () => {
+            const { exportDocx } = await import('./utils/exportDocx');
+            await exportDocx(activeNote);
+          }}
         />
       )}
 

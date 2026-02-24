@@ -11,6 +11,7 @@ interface Props {
   onClearCurrentDraft: () => Promise<void>;
   onClearLocalDrafts: () => Promise<void>;
   onExportPdf: () => void;
+  onExportDocx: () => Promise<void>;
 }
 
 function updateObjective(objs: Objective[], index: number, patch: Partial<Objective>): Objective[] {
@@ -30,6 +31,7 @@ export function EditorPage({
   onClearCurrentDraft,
   onClearLocalDrafts,
   onExportPdf,
+  onExportDocx,
 }: Props): JSX.Element {
   const [tab, setTab] = useState<'plan' | 'soap' | 'export'>('plan');
   const warnings = useMemo(() => getHeaderPhiWarnings(note.header), [note.header]);
@@ -250,6 +252,9 @@ export function EditorPage({
             <button type="button" className="btnPrimary" onClick={onExportPdf}>
               Export to PDF
             </button>
+            <button type="button" className="btnPrimary" onClick={() => void onExportDocx()}>
+              Export DOCX
+            </button>
             <button type="button" className="btnSecondary" onClick={onDownloadDraft}>
               Download Draft
             </button>
@@ -293,7 +298,7 @@ export function EditorPage({
             />
           </div>
 
-          <p className="muted">Export to PDF opens the print-friendly view and triggers print dialog.</p>
+          <p className="muted">Export to PDF opens the print-friendly view. Export DOCX downloads a structured Word version.</p>
         </section>
       )}
     </div>
